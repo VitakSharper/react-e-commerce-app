@@ -2,7 +2,7 @@ import React from 'react';
 import './homepage.styles.scss'
 import Directory from "../../components/direcotry/direcotory.component";
 
-const HomePage = () => {
+const HomePage = ({history}) => {
     return (
         <Directory/>
     )
