@@ -23,12 +23,29 @@
     width: 23%;
   }
 
+  .small-price {
+    font-size: 16px;
+  }
+
   .quantity {
-    padding-left: 20px;
+    display: flex;
+
+    .arrow {
+      cursor: pointer;
+    }
+
+    .disable-arrow {
+      color: #EEEEEE;
+    }
+
+    .value {
+      margin: 0 10px;
+    }
   }
 
   .remove-button {
     padding-left: 12px;
     cursor: pointer;
+    color: #EF5350;
   }
 }
