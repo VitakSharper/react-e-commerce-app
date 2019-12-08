@@ -1,7 +1,7 @@
 import firebase from "firebase/app";
 import 'firebase/firestore';
 import 'firebase/auth';
-import {fbConfig} from './fb.account';
+import {fbConfig} from './fb.account.js';
 
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
