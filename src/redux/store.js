@@ -11,7 +11,11 @@ const composeEnhancers =
             // Specify extension’s options like name, actionsBlacklist, actionsCreators, serialize...
         }) : compose;
 
-const middlewares = [logger];
+const middlewares = [];
+
+if (process.env.NODE_ENv === 'development') {
+    middlewares.push(logger);
+}
 
 export const store = createStore(rootReducer, composeEnhancers(applyMiddleware(...middlewares)));
 
