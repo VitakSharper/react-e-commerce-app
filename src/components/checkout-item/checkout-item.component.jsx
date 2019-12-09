@@ -1,31 +1,37 @@
 import React from 'react';
-import './checkout-item.styles.scss';
 
 import {connect} from 'react-redux'
 import {clearItemFromCart, removeItem, addItem} from "../../redux/cart/cart.actions";
 
+import {
+    CheckoutItemContainer,
+    ImageContainer,
+    TextContainer,
+    QuantityContainer,
+    RemoveButtonContainer,
+    ArrowControl,
+    SmallPrice
+} from './checkout-item.styles';
 
-const CheckoutItem = ({item, clearItem, removeItem, addItem}) => {
-    const {name, imageUrl, price, quantity} = item;
+const CheckoutItem = ({cartItem, clearItem, removeItem, addItem}) => {
+    const {name, imageUrl, price, quantity} = cartItem;
 
     return (
-        <div className='checkout-item'>
-            <div className='image-container'>
+        <CheckoutItemContainer>
+            <ImageContainer>
                 <img src={imageUrl} alt="item"/>
-            </div>
-            <span className='name'>{name}</span>
-            <span className='quantity'>
-                <div className={`${quantity === 1 ? 'disable-arrow' : 'arrow'}`}
-                     onClick={() => removeItem(item)}>&#10094;
-                </div>
-                <span className='value'>{quantity}</span>
-                <div className='arrow' onClick={() => addItem(item)}>&#10095;</div>
-            </span>
-            <span className='price'>$ {price}
-                <span className='small-price'>{price * quantity > price ? `  ($ ${price * quantity})` : ''}</span>
-            </span>
-            <div className='remove-button' onClick={() => clearItem(item)}>&#10005;</div>
-        </div>
+            </ImageContainer>
+            <TextContainer>{name}</TextContainer>
+            <QuantityContainer>
+                <ArrowControl quantity={quantity} onClick={() => removeItem(cartItem)}>&#10094;</ArrowControl>
+                <span>{quantity}</span>
+                <div onClick={() => addItem(cartItem)}>&#10095;</div>
+            </QuantityContainer>
+            <TextContainer>$ {price}
+                <SmallPrice>{price * quantity > price ? `  ($ ${price * quantity})` : ''}</SmallPrice>
+            </TextContainer>
+            <RemoveButtonContainer onClick={() => clearItem(cartItem)}>&#10005;</RemoveButtonContainer>
+        </CheckoutItemContainer>
     )
 };
 

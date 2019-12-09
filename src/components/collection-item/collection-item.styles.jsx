@@ -8,6 +8,10 @@ export const CollectionItemContainer = styled.div`
   height: 350px;
   align-items: center;
   position: relative;
+    background: #f2f6f9;
+  background: linear-gradient(#fff, #f2f6f9);
+  box-shadow: 0 0 0 1px rgba(14, 41, 57, .12), 0 2px 5px rgba(14, 41, 57, .44), inset 0 -1px 2px rgba(14, 41, 57, .15);
+
   &:hover {
     .image {
       opacity: 0.8;
@@ -38,18 +42,20 @@ export const BackgroundImage = styled.div`
 
 export const CollectionFooterContainer = styled.div`
   width: 100%;
-  height: 5%;
-  display: flex;
-  justify-content: space-between;
-  font-size: 18px;
+    height: 8%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
 `;
 
 export const NameContainer = styled.span`
   width: 90%;
   margin-bottom: 15px;
+  margin-left: 1rem;
 `;
 
 export const PriceContainer = styled.span`
   width: 10%;
   text-align: right;
+    margin-right: 1rem;
 `;

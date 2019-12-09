@@ -8,7 +8,6 @@ export const selectShopCollections = createSelector(
 );
 
 
-
 export const selectCollectionsForPreview = createSelector(
     [selectShopCollections],
 // Object.keys(shop.collections).map(key => shop.collections[key])
