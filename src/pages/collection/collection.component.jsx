@@ -22,7 +22,6 @@ const Collection = ({collection: {title, items}}) => {
                 }
             </div>
         </div>
-
     )
 };
 
