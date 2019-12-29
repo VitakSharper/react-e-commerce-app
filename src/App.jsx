@@ -4,7 +4,6 @@ import {Switch, Route, Redirect} from 'react-router-dom'
 import {connect} from 'react-redux';
 import {createStructuredSelector} from "reselect";
 
-import './App.scss';
 
 import Header from "./components/header/header.component";
 import HomePage from "./pages/home/home.component";
@@ -16,6 +15,8 @@ import SignInAndSignUp from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.com
 import {checkUserSession} from "./redux/user/user.actions";
 import {selectCurrentUser} from "./redux/user/user.selectors";
 
+import {GlobalStyle} from "./global.styles";
+
 const App = ({currentUser, checkUserSession}) => {
 
     useEffect(() => {
@@ -24,6 +25,7 @@ const App = ({currentUser, checkUserSession}) => {
 
     return (
         <div>
+            <GlobalStyle/>
             <Header/>
             <Switch>
                 <Route path='/' component={HomePage} exact/>

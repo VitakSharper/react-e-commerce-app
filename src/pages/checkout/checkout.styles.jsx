@@ -16,7 +16,8 @@ export const CheckoutPageContainer = styled.div`
 
 export const CheckoutHeaderContainer = styled.div`
   width: 100%;
-  height: 40px;
+  height: 4rem;
+  font-size: 1.6rem;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid darkgrey;
@@ -32,14 +33,14 @@ export const HeaderBlockContainer = styled.div`
 `;
 
 export const TotalContainer = styled.div`
-  margin-top: 30px;
+  margin-top: 3rem;
   margin-left: auto;
-  font-size: 36px;
+  font-size: 3.6rem;
 `;
 
 export const WarningContainer = styled.div`
   text-align: center;
-  margin-top: 40px;
-  font-size: 24px;
+  margin-top: 4rem;
+  font-size: 2.4rem;
   color: red;
 `;
