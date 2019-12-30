@@ -27,11 +27,11 @@ const SignUp = ({signUp}) => {
 
     return (
         <div className='sign-up'>
-            <h2 className='title'>
+            <h2 className='sign-up__title'>
                 I do not have a account
             </h2>
-            <span>Sign up with your email and password</span>
-            <form className='sign-up-form' onSubmit={handleSubmit}>
+            <span className='sign-up__sub'>Sign up with your email and password</span>
+            <form className='sign-up__form' onSubmit={handleSubmit}>
                 <FormInput
                     type='text'
                     name='displayName'

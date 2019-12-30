@@ -6,11 +6,11 @@ export const CheckoutPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px auto 0;
+  margin: 5rem auto 0;
 
   button {
     margin-left: auto;
-    margin-top: 50px;
+    margin-top: 5rem;
   }
 `;
 

@@ -26,8 +26,8 @@ const SignIn = ({googleSignInStart, emailSignInStart}) => {
 
     return (
         <div className='sign-in'>
-            <h2 className='title'>I already have an account</h2>
-            <span>Sign in with your email and password</span>
+            <h2 className='sign-in__title'>I already have an account</h2>
+            <span className={'sign-in__sub'}>Sign in with your email and password</span>
 
             <form onSubmit={handleSubmit}>
 
